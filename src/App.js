@@ -1,16 +1,25 @@
 import './App.css';
 
-function thebut(props){
-    return <button onclick="" ></button>
-}
+
 function App() {
+    const buts = ['7','8','9','DEL','4','5','6','+','1','2','3','-','.','0','/','x']
+    let screen = <div className="screen"></div>
+    function thebut(val){
+        
+    }
+    const reset = () =>{
 
+    }
+    const egual = () =>{
 
+    }
   return (
-    <div class="container">
-        <div class="screen"></div>
-        <div class="buttons">
-            
+    <div className="container">
+        {screen}
+        <div className="buttons">
+            {buts.map(x=>(<button onClick={thebut(x)}>{x}</button>))}
+            <button onClick={reset()}>RESET</button>
+            <button onClick={egual()}>=</button>
         </div>
     </div>
   );
